@@ -1,0 +1,9 @@
+config:
+  target: "https://rzeymx23e7feo4g6gni4and7340wfrfq.lambda-url.eu-west-3.on.aws"
+  phases:
+    - duration: 60
+      arrivalRate: 50
+scenarios:
+  - flow:
+      - get:
+          url: "/stored-int"
