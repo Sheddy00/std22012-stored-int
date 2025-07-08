@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class StoredIntController {
 
   @GetMapping("/stored-int")
-  public ResponseEntity<Object> getStoredInt() {
+  public ResponseEntity<Object> getStoredInt() throws InterruptedException {
+    Thread.sleep(10_000);
     File file = new File("/tmp/stored-int.txt");
     Random random = new Random();
     try {
